@@ -1,0 +1,86 @@
+/* Fundo com gradiente animado */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1);
+    background-size: 800% 800%;
+    animation: gradiente 10s ease infinite;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  /* Animação de fundo */
+  @keyframes gradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Caixa central bonita */
+  .caixa {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    animation: surgir 1s ease forwards;
+  }
+  
+  /* Animação da caixa */
+  @keyframes surgir {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Texto da pergunta */
+  .caixa p {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  /* Botões */
+  .botoes button {
+    padding: 12px 24px;
+    margin: 0 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+  }
+  
+  /* Botão SIM */
+  #sim {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  #sim:hover {
+    background-color: #45a049;
+  }
+  
+  /* Botão NÃO */
+  #nao {
+    background-color: #f44336;
+    color: white;
+    position: relative;
+  }
+  
+  #nao:hover {
+    background-color: #e53935;
+  }
